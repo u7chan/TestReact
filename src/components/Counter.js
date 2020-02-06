@@ -1,19 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
-function Counter() {
+function Counter(props) {
   const [count, setCount] = useState(0);
   function addCount() {
     const newCount = count + 1;
     setCount(newCount);
   }
-
-  useEffect(() => {
-    console.log("useEffect Mount");
-    return function() {
-      console.log("useEffect Unmounte");
-    };
-  }, []);
-
   return (
     <div>
       <div>
